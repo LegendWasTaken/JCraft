@@ -25,6 +25,7 @@
             <groupId>org.spacehq</groupId>
             <artifactId>mcprotocollib</artifactId>
             <version>1.8.8-SNAPSHOT</version>
+            <scope>system</scope>
             <systemPath>D:/Development/Java/MCProtocolLib-1.8/target/mcprotocollib-1.8.8-SNAPSHOT.jar</systemPath>
         </dependency>
     </dependencies>
