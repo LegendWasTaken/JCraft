@@ -2,22 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d72728a8-c627-43e9-a88e-bf26a9e54a22" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/legend/JCraft/Source/Bot/Bot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/legend/JCraft/Source/Bot/Bot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/legend/JCraft/Source/Bot/World/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/legend/JCraft/Source/Bot/World/World.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/legend/JCraft/Source/PacketHandler/NetworkHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/legend/JCraft/Source/PacketHandler/NetworkHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/legend/JCraft/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/legend/JCraft/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/legend/JCraft/Source/Bot.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/legend/JCraft/Source/BotHandler/BotHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/legend/JCraft/Source/BotHandler/BotHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/legend/JCraft/Source/GUI/GUI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/legend/JCraft/Source/Inventory/Inventory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/legend/JCraft/Source/PacketHandler/NetworkHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/legend/JCraft/Source/PacketHandler/NetworkHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/legend/JCraft/Source/Util/EntityPosition.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/legend/JCraft/Source/Util/EntityPosition.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/legend/JCraft/Source/World/Block/Block.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/legend/JCraft/Source/World/ChunkColumn.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/legend/JCraft/Source/World/World$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/legend/JCraft/Source/World/World.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/legend/JCraft/Source/Bot/BotConsole/BotConsole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/legend/JCraft/Source/Bot/BotConsole/BotConsole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/legend/JCraft/Source/Bot/Inventory/Inventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/legend/JCraft/Source/Bot/Inventory/Inventory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/legend/JCraft/Source/Network/PacketHandlers/Inventory/ChangeHeldItemPacket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/legend/JCraft/Source/Network/PacketHandlers/Inventory/ChangeHeldItemPacket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/legend/JCraft/Source/Network/PacketHandlers/Location/PlayerPositionRoationPacket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/legend/JCraft/Source/Network/PacketHandlers/Location/PlayerPositionRoationPacket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/legend/JCraft/Source/Network/PacketHandlers/ServerConnection/ChatPacket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/legend/JCraft/Source/Network/PacketHandlers/ServerConnection/ChatPacket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/legend/JCraft/Source/Network/PacketHandlers/ServerConnection/JoinGamePacket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/legend/JCraft/Source/Network/PacketHandlers/ServerConnection/JoinGamePacket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/legend/JCraft/Source/Network/PacketHandlers/WorldData/BlockChangePacket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/legend/JCraft/Source/Network/PacketHandlers/WorldData/BlockChangePacket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/legend/JCraft/Source/Network/PacketHandlers/WorldData/MultiBlockChangePacket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/legend/JCraft/Source/Network/PacketHandlers/WorldData/MultiBlockChangePacket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/legend/JCraft/Source/Network/PacketHandlers/WorldData/MultiChunkPacket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/legend/JCraft/Source/Network/PacketHandlers/WorldData/MultiChunkPacket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/legend/JCraft/Source/Network/PacketHandlers/WorldData/SingleChunkPacket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/legend/JCraft/Source/Network/PacketHandlers/WorldData/SingleChunkPacket.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -49,11 +45,12 @@
     </option>
   </component>
   <component name="ProjectId" id="1TLHMEiY4IzpcfzfQ5KRTKHwLou" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -118,7 +115,28 @@
       <option name="project" value="LOCAL" />
       <updated>1574704636061</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Refractored file paths ( Should make more sense )">
+      <created>1574705436061</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1574705436061</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Redid how packets are handled">
+      <created>1574710302797</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1574710302797</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Added a console for the bot ( Make it look nicer )">
+      <created>1574710340023</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1574710340023</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -138,7 +156,10 @@
     <MESSAGE value="Removed large comment ( Waste of bytes )" />
     <MESSAGE value="Removed disconnect handling" />
     <MESSAGE value="Added block placement, added mcprotocollib to the repo" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added block placement, added mcprotocollib to the repo" />
+    <MESSAGE value="Refractored file paths ( Should make more sense )" />
+    <MESSAGE value="Redid how packets are handled" />
+    <MESSAGE value="Added a console for the bot ( Make it look nicer )" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added a console for the bot ( Make it look nicer )" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/JCraft$Main.ic" NAME="Main Coverage Results" MODIFIED="1573599875902" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
