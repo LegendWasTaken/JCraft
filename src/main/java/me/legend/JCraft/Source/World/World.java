@@ -79,26 +79,21 @@ public class World {
     }
 
     public void placeBlock(Vector3d blockLocation, Vector3d offset, Session session, ItemStack held) {
-        Face face = Face.WEST;
-        float cursorX = 0, cursorY = 0, cursorZ = 0;
-        // West = Place block south
-        // East =
-        // South =
-        // North =
-        // Bottom =
-        // Top =
-        if( offset.x + offset.y > 1 ||
-            offset.y + offset.z > 1 ||
-            offset.x + offset.z > 1) // Just a check to make sure that it isn't an invalid offset
-            return;
-        if(offset.x + offset.z == 0){
-            // Up and down
-
+        Face face = Face.INVALID;
+        offset.floor();
+        if(!(offset.x + offset.y + offset.z > 2)) {
+            face =
+              // X Axis check
+              offset.x == 1 ? Face.SOUTH : offset.x == - 1 ? Face.NORTH :
+                // Y Axis check
+                offset.y == 1 ? Face.TOP : offset.y == - 1 ? Face.BOTTOM :
+                  // Z Axis Check
+                    offset.z == 1 ? Face.WEST : offset.z == - 1 ? Face.EAST : Face.INVALID;
         }
+
+        float cursorX = 0, cursorY = 0, cursorZ = 0;
         switch (face) {
             case TOP:
-                // cursorX = 8;
-                // cursorZ = 8;
                 cursorX = 0;
                 cursorY = 0;
                 cursorZ = 0;
@@ -130,7 +125,7 @@ public class World {
             default:
                 return;
         }
-        session.send(new ClientPlayerPlaceBlockPacket(Vector3d.toPosition(blockLocation), Face.WEST, held, 8, 8, 8));
+        session.send(new ClientPlayerPlaceBlockPacket(Vector3d.toPosition(blockLocation.floor()), face, held, cursorX, cursorY, cursorZ));
     }
 
     public void placeBlock(Face face, Vector3d referenceBlock, ItemStack held, Session session){

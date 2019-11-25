@@ -26,7 +26,7 @@
             <artifactId>mcprotocollib</artifactId>
             <version>1.8.8-SNAPSHOT</version>
             <scope>system</scope>
-            <systemPath>D:/Development/Java/MCProtocolLib-1.8/target/mcprotocollib-1.8.8-SNAPSHOT.jar</systemPath>
+            <systemPath>${basedir}/libs/mcprotocollib.jar</systemPath>
         </dependency>
     </dependencies>
 </project>

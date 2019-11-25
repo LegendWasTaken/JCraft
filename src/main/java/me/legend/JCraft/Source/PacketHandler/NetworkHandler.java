@@ -130,7 +130,7 @@ public class NetworkHandler extends SessionAdapter {
                     posZ = Integer.parseInt(chatmsg.split(",")[3]);
                     Block block = bot.world.getBlock(posX, posY, posZ);
                     e.getSession().send(new ClientPlayerPositionRotationPacket(false, bot.getX(), bot.getY(), bot.getZ(), bot.getYaw(), bot.getPitch()));
-                    bot.world.placeBlock(new Vector3d(posX, posY, posZ), new Vector3d(posX, posY, posZ), e.getSession(), bot.inventory.getHeldItem());
+                    bot.world.placeBlock(new Vector3d(posX, posY, posZ), new Vector3d(-1, 0, 0), e.getSession(), bot.inventory.getHeldItem());
                     e.getSession().send(new ClientChatPacket("[JCraft] Attempting to place the block"));
 
                 } catch (Exception ex){

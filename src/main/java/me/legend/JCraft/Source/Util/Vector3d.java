@@ -27,6 +27,14 @@ public class Vector3d {
         return this;
     }
 
+    public Vector3d normalize(){
+        double t = (this.x + this.y + this.z);
+        this.x /= t;
+        this.y /= y;
+        this.z /= z;
+        return this;
+    }
+
     public Vector3d round() {
         this.x = (int) x;
         this.y = (int) y;
