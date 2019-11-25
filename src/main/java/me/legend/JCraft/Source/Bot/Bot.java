@@ -107,5 +107,4 @@ public class Bot {
     public double getZ() { return this.location.getPosZ(); }
     public float getYaw() { return this.location.getYaw(); }
     public float getPitch() { return this.location.getPitch(); }
-
 }

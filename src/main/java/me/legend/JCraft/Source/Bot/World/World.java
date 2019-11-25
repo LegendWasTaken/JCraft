@@ -5,6 +5,7 @@ import com.github.steveice10.mc.protocol.data.game.ItemStack;
 import com.github.steveice10.mc.protocol.data.game.ShortArray3d;
 import com.github.steveice10.mc.protocol.data.game.values.Face;
 import com.github.steveice10.mc.protocol.packet.ingame.client.player.ClientPlayerPlaceBlockPacket;
+import me.legend.JCraft.Source.Util.EntityPosition;
 import me.legend.JCraft.Source.Util.Vector3d;
 import me.legend.JCraft.Source.Bot.World.Block.Block;
 import me.legend.JCraft.Source.Entity.Entity;
