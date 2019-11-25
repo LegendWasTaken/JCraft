@@ -25,6 +25,7 @@
       </list>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -132,7 +133,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574720980435</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Added documentation">
+      <created>1574723927975</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1574723927975</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -156,7 +164,8 @@
     <MESSAGE value="Redid how packets are handled" />
     <MESSAGE value="Added a console for the bot ( Make it look nicer )" />
     <MESSAGE value="Small refractor with bot class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Small refractor with bot class" />
+    <MESSAGE value="Added documentation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added documentation" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/JCraft$Main.ic" NAME="Main Coverage Results" MODIFIED="1573599875902" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
