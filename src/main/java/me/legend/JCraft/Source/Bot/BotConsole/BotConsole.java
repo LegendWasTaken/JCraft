@@ -18,7 +18,7 @@ public class BotConsole {
     }
 
     public void debug(String message){
-        if(this.debug) System.out.println("[" + (new SimpleDateFormat("HH:mm:ss").format(new Date(System.currentTimeMillis()))) + " DEBUG] " + message);
+        if(this.debug) System.out.println("[" + (new SimpleDateFormat("HH:mm:ss").format(new Date(System.currentTimeMillis()))) + " DEBUG - " + this.bot.getName() +"] " + message);
     }
 
 }

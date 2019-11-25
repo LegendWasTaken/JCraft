@@ -13,7 +13,7 @@ public class MultiChunkPacket {
             int chunkX = packet.getX(i);
             int chunkZ = packet.getZ(i);
             try {
-                bot.world.addChunkColumn( new ChunkColumn(chunkX, chunkZ, packet.getChunks(i)));
+                bot.getWorld().addChunkColumn( new ChunkColumn(chunkX, chunkZ, packet.getChunks(i)));
             } catch (InvalidSectionSizeException ignored) { }
         }
     }

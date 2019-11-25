@@ -10,9 +10,9 @@ public class SingleChunkPacket {
 
     public SingleChunkPacket(ServerChunkDataPacket packet, Bot bot){
         try {
-            bot.world.addChunkColumn(new ChunkColumn(packet.getX(), packet.getZ(), packet.getChunks()));
+            bot.getWorld().addChunkColumn(new ChunkColumn(packet.getX(), packet.getZ(), packet.getChunks()));
         } catch (InvalidSectionSizeException e){
-            bot.console.debug("There was invalid chunk packet sent from the server [ X: " + packet.getX() + ", Z: " + packet.getZ() + "]");
+            bot.getConsole().debug("There was invalid chunk packet sent from the server [ X: " + packet.getX() + ", Z: " + packet.getZ() + "]");
         }
     }
 

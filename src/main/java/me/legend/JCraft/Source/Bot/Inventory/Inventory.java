@@ -31,7 +31,7 @@ public class Inventory {
             * you are a stale ham sandwich of a human
             * */
             try{
-                BotHandler.getBotBySession(session).location.look(session);
+                BotHandler.getBotBySession(session).getLocation().look(session);
             } catch (InvalidSessionException ignored) {}
 
         }

@@ -9,6 +9,6 @@ public class BlockChangePacket {
     public BlockChangePacket(ServerBlockChangePacket packet, Bot bot){
         Position target = packet.getRecord().getPosition();
         Block block = new Block(packet.getRecord().getData(), packet.getRecord().getId());
-        bot.world.setBlock(target.getX(), target.getY(), target.getZ(), block);
+        bot.getWorld().setBlock(target.getX(), target.getY(), target.getZ(), block);
     }
 }

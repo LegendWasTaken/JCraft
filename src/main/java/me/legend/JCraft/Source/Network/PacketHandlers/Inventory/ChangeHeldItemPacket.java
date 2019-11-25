@@ -5,9 +5,6 @@ import me.legend.JCraft.Source.Bot.Bot;
 
 public class ChangeHeldItemPacket {
     public ChangeHeldItemPacket(ServerChangeHeldItemPacket packet, Bot bot){
-        bot
-          .inventory
-          .setHeldItem
-            (packet.getSlot(), true);
+        bot.getInventory().setHeldItem(packet.getSlot(), true);
     }
 }

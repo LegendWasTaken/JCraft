@@ -22,14 +22,14 @@ public class Bot {
     private String password;
     private Boolean premium;
 
-    public String host;
-    public Integer port;
-    public EntityPosition location;
-    public World world;
-    public Inventory inventory;
-    public BotConsole console;
-    public static Boolean debug = true;
+    private String host;
+    private Integer port;
+    private EntityPosition location;
+    private World world;
+    private Inventory inventory;
+    private BotConsole console;
 
+    public static Boolean debug = true;
     public MinecraftProtocol minecraftProtocol;
     public Client client;
     public Session session;
@@ -101,6 +101,15 @@ public class Bot {
     public String getName(){
         return this.username;
     }
+
+    public String getHost(){ return this.host; }
+    public Integer getPort(){ return this.port; }
+    public EntityPosition getLocation(){ return this.location; }
+    public World getWorld(){ return this.world; }
+    public Inventory getInventory(){ return this.inventory; }
+    public BotConsole getConsole(){ return this.console; }
+
+    public void setLocation(EntityPosition entityPosition){ this.location = entityPosition; }
 
     public double getX() { return this.location.getPosX(); }
     public double getY() { return this.location.getPosY(); }
