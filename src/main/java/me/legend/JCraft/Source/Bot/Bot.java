@@ -2,9 +2,11 @@ package me.legend.JCraft.Source.Bot;
 
 import com.github.steveice10.mc.protocol.MinecraftConstants;
 import com.github.steveice10.mc.protocol.MinecraftProtocol;
+import com.github.steveice10.mc.protocol.data.game.ItemStack;
+import me.legend.JCraft.Source.Bot.BotConsole.BotConsole;
 import me.legend.JCraft.Source.BotHandler.BotHandler;
 import me.legend.JCraft.Source.Bot.Inventory.Inventory;
-import me.legend.JCraft.Source.PacketHandler.NetworkHandler;
+import me.legend.JCraft.Source.Network.NetworkHandler;
 import me.legend.JCraft.Source.Util.EntityPosition;
 import me.legend.JCraft.Source.Bot.World.World;
 import org.spacehq.mc.auth.exception.request.RequestException;
@@ -19,12 +21,13 @@ public class Bot {
     private String email;
     private String password;
     private Boolean premium;
-    private String host = "127.0.0.1";
-    private Integer port = 25565;
 
+    public String host;
+    public Integer port;
     public EntityPosition location;
     public World world;
     public Inventory inventory;
+    public BotConsole console;
     public static Boolean debug = true;
 
     public MinecraftProtocol minecraftProtocol;
@@ -42,6 +45,8 @@ public class Bot {
         this.username = username;
         this.host = host;
         this.port = port;
+        this.console = new BotConsole(this, true, true);
+        this.inventory = new Inventory(this.session, new ItemStack[36]);
 
         world = new World();
 
