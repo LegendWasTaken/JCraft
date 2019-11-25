@@ -1,16 +1,12 @@
-package me.legend.JCraft.Source.World;
+package me.legend.JCraft.Source.Bot.World;
 
 import com.github.steveice10.mc.protocol.data.game.Chunk;
 import com.github.steveice10.mc.protocol.data.game.ItemStack;
-import com.github.steveice10.mc.protocol.data.game.Position;
 import com.github.steveice10.mc.protocol.data.game.ShortArray3d;
 import com.github.steveice10.mc.protocol.data.game.values.Face;
 import com.github.steveice10.mc.protocol.packet.ingame.client.player.ClientPlayerPlaceBlockPacket;
-import com.github.steveice10.mc.protocol.packet.ingame.client.player.ClientPlayerRotationPacket;
-import me.legend.JCraft.Source.Bot;
-import me.legend.JCraft.Source.Util.Vec3;
 import me.legend.JCraft.Source.Util.Vector3d;
-import me.legend.JCraft.Source.World.Block.Block;
+import me.legend.JCraft.Source.Bot.World.Block.Block;
 import me.legend.JCraft.Source.Entity.Entity;
 import me.legend.JCraft.Source.Exceptions.InvalidChunkSectionException;
 import org.spacehq.packetlib.Session;

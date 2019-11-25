@@ -1,6 +1,6 @@
 package me.legend.JCraft;
 
-import me.legend.JCraft.Source.Bot;
+import me.legend.JCraft.Source.Bot.Bot;
 import me.legend.JCraft.Source.BotHandler.BotHandler;
 import me.legend.JCraft.Source.Exceptions.InvalidIDException;
 

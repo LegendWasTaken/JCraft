@@ -1,6 +1,6 @@
 package me.legend.JCraft.Source.BotHandler;
 
-import me.legend.JCraft.Source.Bot;
+import me.legend.JCraft.Source.Bot.Bot;
 import me.legend.JCraft.Source.Exceptions.InvalidBotException;
 import me.legend.JCraft.Source.Exceptions.InvalidIDException;
 import me.legend.JCraft.Source.Exceptions.InvalidSessionException;

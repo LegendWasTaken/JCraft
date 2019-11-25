@@ -1,4 +1,4 @@
-package me.legend.JCraft.Source.World.Block;
+package me.legend.JCraft.Source.Bot.World.Block;
 
 public class Block {
 

@@ -1,12 +1,12 @@
-package me.legend.JCraft.Source;
+package me.legend.JCraft.Source.Bot;
 
 import com.github.steveice10.mc.protocol.MinecraftConstants;
 import com.github.steveice10.mc.protocol.MinecraftProtocol;
 import me.legend.JCraft.Source.BotHandler.BotHandler;
-import me.legend.JCraft.Source.Inventory.Inventory;
+import me.legend.JCraft.Source.Bot.Inventory.Inventory;
 import me.legend.JCraft.Source.PacketHandler.NetworkHandler;
 import me.legend.JCraft.Source.Util.EntityPosition;
-import me.legend.JCraft.Source.World.World;
+import me.legend.JCraft.Source.Bot.World.World;
 import org.spacehq.mc.auth.exception.request.RequestException;
 import org.spacehq.packetlib.Client;
 import org.spacehq.packetlib.Session;

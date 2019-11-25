@@ -1,8 +1,7 @@
 package me.legend.JCraft.Source.Util;
 
 import com.github.steveice10.mc.protocol.packet.ingame.client.player.ClientPlayerPositionRotationPacket;
-import com.github.steveice10.mc.protocol.packet.ingame.server.entity.player.ServerChangeHeldItemPacket;
-import me.legend.JCraft.Source.Bot;
+import me.legend.JCraft.Source.Bot.Bot;
 import me.legend.JCraft.Source.BotHandler.BotHandler;
 import me.legend.JCraft.Source.Exceptions.InvalidSessionException;
 import org.spacehq.packetlib.Session;

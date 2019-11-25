@@ -1,9 +1,7 @@
-package me.legend.JCraft.Source.Inventory;
+package me.legend.JCraft.Source.Bot.Inventory;
 
 import com.github.steveice10.mc.protocol.data.game.ItemStack;
 import com.github.steveice10.mc.protocol.packet.ingame.client.player.ClientChangeHeldItemPacket;
-import com.github.steveice10.mc.protocol.packet.ingame.client.player.ClientPlayerMovementPacket;
-import com.github.steveice10.mc.protocol.packet.ingame.client.player.ClientPlayerPositionRotationPacket;
 import me.legend.JCraft.Source.BotHandler.BotHandler;
 import me.legend.JCraft.Source.Exceptions.InvalidSessionException;
 import org.spacehq.packetlib.Session;

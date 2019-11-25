@@ -1,10 +1,8 @@
 package me.legend.JCraft.Source.PacketHandler;
 
 import com.github.steveice10.mc.protocol.data.game.Position;
-import com.github.steveice10.mc.protocol.data.game.values.Face;
 import com.github.steveice10.mc.protocol.data.game.values.world.block.BlockChangeRecord;
 import com.github.steveice10.mc.protocol.data.message.Message;
-import com.github.steveice10.mc.protocol.data.message.TranslationMessage;
 import com.github.steveice10.mc.protocol.packet.ingame.client.ClientChatPacket;
 import com.github.steveice10.mc.protocol.packet.ingame.client.player.ClientPlayerPositionRotationPacket;
 import com.github.steveice10.mc.protocol.packet.ingame.server.ServerChatPacket;
@@ -17,16 +15,15 @@ import com.github.steveice10.mc.protocol.packet.ingame.server.world.ServerChunkD
 import com.github.steveice10.mc.protocol.packet.ingame.server.world.ServerMultiBlockChangePacket;
 import com.github.steveice10.mc.protocol.packet.ingame.server.world.ServerMultiChunkDataPacket;
 import me.legend.JCraft.Source.Exceptions.InvalidSessionException;
-import me.legend.JCraft.Source.Inventory.Inventory;
+import me.legend.JCraft.Source.Bot.Inventory.Inventory;
 import me.legend.JCraft.Source.Util.EntityPosition;
 import me.legend.JCraft.Source.Util.Vector3d;
-import me.legend.JCraft.Source.World.Block.Block;
-import me.legend.JCraft.Source.Bot;
+import me.legend.JCraft.Source.Bot.World.Block.Block;
+import me.legend.JCraft.Source.Bot.Bot;
 import me.legend.JCraft.Source.BotHandler.BotHandler;
 import me.legend.JCraft.Source.Exceptions.InvalidSectionSizeException;
-import me.legend.JCraft.Source.World.ChunkColumn;
-import me.legend.JCraft.Source.World.World;
-import org.spacehq.packetlib.event.session.DisconnectedEvent;
+import me.legend.JCraft.Source.Bot.World.ChunkColumn;
+import me.legend.JCraft.Source.Bot.World.World;
 import org.spacehq.packetlib.event.session.PacketReceivedEvent;
 import org.spacehq.packetlib.event.session.SessionAdapter;
 
