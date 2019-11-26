@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d72728a8-c627-43e9-a88e-bf26a9e54a22" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/legend/JCraft/Source/Network/PacketHandlers/ServerConnection/ChatPacket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/legend/JCraft/Source/Network/PacketHandlers/ServerConnection/ChatPacket.java" afterDir="false" />
-    </list>
+    <list default="true" id="d72728a8-c627-43e9-a88e-bf26a9e54a22" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +123,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574710340023</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added handling to chat message">
+      <created>1574726941713</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1574726941713</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -149,7 +153,8 @@
     <MESSAGE value="Refractored file paths ( Should make more sense )" />
     <MESSAGE value="Redid how packets are handled" />
     <MESSAGE value="Added a console for the bot ( Make it look nicer )" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added a console for the bot ( Make it look nicer )" />
+    <MESSAGE value="Added handling to chat message" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added handling to chat message" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/JCraft$Main.ic" NAME="Main Coverage Results" MODIFIED="1573599875902" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
