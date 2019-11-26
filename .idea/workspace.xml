@@ -3,17 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d72728a8-c627-43e9-a88e-bf26a9e54a22" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/legend/JCraft/Source/Bot/Bot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/legend/JCraft/Source/Bot/Bot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/legend/JCraft/Source/Bot/BotConsole/BotConsole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/legend/JCraft/Source/Bot/BotConsole/BotConsole.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/legend/JCraft/Source/Bot/Inventory/Inventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/legend/JCraft/Source/Bot/Inventory/Inventory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/legend/JCraft/Source/Network/PacketHandlers/Inventory/ChangeHeldItemPacket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/legend/JCraft/Source/Network/PacketHandlers/Inventory/ChangeHeldItemPacket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/legend/JCraft/Source/Network/PacketHandlers/Location/PlayerPositionRoationPacket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/legend/JCraft/Source/Network/PacketHandlers/Location/PlayerPositionRoationPacket.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/legend/JCraft/Source/Network/PacketHandlers/ServerConnection/ChatPacket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/legend/JCraft/Source/Network/PacketHandlers/ServerConnection/ChatPacket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/legend/JCraft/Source/Network/PacketHandlers/ServerConnection/JoinGamePacket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/legend/JCraft/Source/Network/PacketHandlers/ServerConnection/JoinGamePacket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/legend/JCraft/Source/Network/PacketHandlers/WorldData/BlockChangePacket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/legend/JCraft/Source/Network/PacketHandlers/WorldData/BlockChangePacket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/legend/JCraft/Source/Network/PacketHandlers/WorldData/MultiBlockChangePacket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/legend/JCraft/Source/Network/PacketHandlers/WorldData/MultiBlockChangePacket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/legend/JCraft/Source/Network/PacketHandlers/WorldData/MultiChunkPacket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/legend/JCraft/Source/Network/PacketHandlers/WorldData/MultiChunkPacket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/legend/JCraft/Source/Network/PacketHandlers/WorldData/SingleChunkPacket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/legend/JCraft/Source/Network/PacketHandlers/WorldData/SingleChunkPacket.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
