@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d72728a8-c627-43e9-a88e-bf26a9e54a22" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/legend/JCraft/Source/Network/PacketHandlers/ServerConnection/ChatPacket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/legend/JCraft/Source/Network/PacketHandlers/ServerConnection/ChatPacket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,6 +26,7 @@
       </list>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -46,6 +48,11 @@
     <property name="restartRequiresConfirmation" value="false" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Development\Java\JCraft\docs" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -125,21 +132,28 @@
       <option name="project" value="LOCAL" />
       <updated>1574710340023</updated>
     </task>
-    <task id="LOCAL-00006" summary="Added handling to chat message">
-      <created>1574726941713</created>
+    <task id="LOCAL-00006" summary="Small refractor with bot class">
+      <created>1574720980435</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1574726941713</updated>
+      <updated>1574720980435</updated>
     </task>
-    <task id="LOCAL-00007" summary="Temporarily fixed issue #01">
-      <created>1574802510468</created>
+    <task id="LOCAL-00007" summary="Added documentation">
+      <created>1574723927975</created>
       <option name="number" value="00007" />
       <option name="presentableId" value="LOCAL-00007" />
       <option name="project" value="LOCAL" />
-      <updated>1574802510468</updated>
+      <updated>1574723927975</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Added documentation">
+      <created>1574724067890</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1574724067890</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -162,9 +176,9 @@
     <MESSAGE value="Refractored file paths ( Should make more sense )" />
     <MESSAGE value="Redid how packets are handled" />
     <MESSAGE value="Added a console for the bot ( Make it look nicer )" />
-    <MESSAGE value="Added handling to chat message" />
-    <MESSAGE value="Temporarily fixed issue #01" />
-    <option name="LAST_COMMIT_MESSAGE" value="Temporarily fixed issue #01" />
+    <MESSAGE value="Small refractor with bot class" />
+    <MESSAGE value="Added documentation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added documentation" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/JCraft$Main.ic" NAME="Main Coverage Results" MODIFIED="1573599875902" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
