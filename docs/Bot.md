@@ -48,7 +48,7 @@
   ### console.debug(String message)
   * `message` - The message that gets debugged, with the default debugging scheme. `[HH:MM:SS DEBUG - ${username}] ${message}` Username being the bots username
   
-  ### console.getLogging(Boolean to)
+  ### console.setLogging(Boolean to)
   * `to` - Set if the bots console, should be outputting log messages
   
   ### console.setDebugging(Boolean to)
