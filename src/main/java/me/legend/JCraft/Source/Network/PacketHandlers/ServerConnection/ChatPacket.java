@@ -21,6 +21,7 @@ public class ChatPacket {
                 JsonArray textArray = (JsonArray) textObj.get("extra");
                 JsonObject textString = (JsonObject) textArray.get(0);
             System.out.println("[" + nameObj.get("text").getAsString() + "]" + " " + textString.get("text").getAsString());
+            //This is hardcoded, but it doesn't matter until there is an issue with another chat type. (With different JSON syntax)
         } else {
             bot.getConsole().log(chatmsg);
         }
