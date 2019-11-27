@@ -33,4 +33,4 @@ If you want to report an issue, open a new issue with the following requirements
 * How to recreate this issue
 
 ## Discussion 
-If this project goes open source a link to a discord server will be here
+[Discord](https://discord.gg/FxPDdcj)

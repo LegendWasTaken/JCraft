@@ -1,7 +1,7 @@
 # Bot Documentation
  
   ## World
-  The world is currently the **most** advanced feature in this library. Extensive documntation is written on it.
+  The world is currently the **most** advanced feature in this library. Extensive documentation is written on it.
   
   ### world.getBlock(Vector3D location)
   * `location` - The absolute location in the world, that you want to get the block data of.
@@ -48,7 +48,7 @@
   ### console.debug(String message)
   * `message` - The message that gets debugged, with the default debugging scheme. `[HH:MM:SS DEBUG - ${username}] ${message}` Username being the bots username
   
-  ### console.getLogging(Boolean to)
+  ### console.setLogging(Boolean to)
   * `to` - Set if the bots console, should be outputting log messages
   
   ### console.setDebugging(Boolean to)
@@ -79,7 +79,7 @@
   * `message` - The message that you want to send
   
   ## Inventory
-  The inventory management is **very** basic, and can be expanded on with relative ease. Refer to [this](https://github.com/LegendWasTaken/JCraft/blob/master/docs/README.md) on requirements, and insutrctions on how to contribute.
+  The inventory management is **very** basic, and can be expanded on with relative ease. Refer to [this](https://github.com/LegendWasTaken/JCraft/blob/master/docs/README.md) on requirements, and instructions on how to contribute.
   
   ### inventory.setHeldSlot(int slot)
   * `slot` - The slot that you want to set as the current held slot
