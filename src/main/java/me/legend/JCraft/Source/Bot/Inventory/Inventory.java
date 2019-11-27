@@ -2,26 +2,24 @@ package me.legend.JCraft.Source.Bot.Inventory;
 
 import com.github.steveice10.mc.protocol.data.game.ItemStack;
 import com.github.steveice10.mc.protocol.packet.ingame.client.player.ClientChangeHeldItemPacket;
-import me.legend.JCraft.Source.BotHandler.BotHandler;
-import me.legend.JCraft.Source.Exceptions.InvalidSessionException;
-import org.spacehq.packetlib.Session;
+import me.legend.JCraft.Source.Bot.Bot;
 
 public class Inventory {
 
-    private Session session;
+    private Bot bot;
     private ItemStack[] items;
     private int heldSlot;
 
-    public Inventory(Session session, ItemStack[] i) {
-        this.session = session;
+    public Inventory(Bot bot, ItemStack[] i) {
+        this.bot = bot;
         items = i;
     }
 
     public ItemStack getItem(int i) { return items[i]; }
 
-    public Inventory setHeldItem(int i, boolean serverSide) {
-        if(!serverSide) {
-            session.send(new ClientChangeHeldItemPacket(i));
+    public Inventory setHeldItem(int i, boolean update) {
+        if(update) {
+            bot.session.send(new ClientChangeHeldItemPacket(i));
             /*
             * For some reason who ever coded the held item update code
             * is completely fucking brain dead, and only updates.
@@ -30,10 +28,7 @@ public class Inventory {
             * you fucking piece of retarded shit
             * you are a stale ham sandwich of a human
             * */
-            try{
-                BotHandler.getBotBySession(session).getLocation().look(session);
-            } catch (InvalidSessionException ignored) {}
-
+            bot.getLocation().look(bot);
         }
         heldSlot = i;
         return this;

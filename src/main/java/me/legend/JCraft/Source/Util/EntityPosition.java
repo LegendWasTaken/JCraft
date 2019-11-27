@@ -2,7 +2,6 @@ package me.legend.JCraft.Source.Util;
 
 import com.github.steveice10.mc.protocol.packet.ingame.client.player.ClientPlayerPositionRotationPacket;
 import me.legend.JCraft.Source.Bot.Bot;
-import me.legend.JCraft.Source.BotHandler.BotHandler;
 import me.legend.JCraft.Source.Exceptions.InvalidSessionException;
 import org.spacehq.packetlib.Session;
 
@@ -44,18 +43,12 @@ public class EntityPosition {
     public float getYaw() { return this.yaw; }
     public float getPitch() { return this.pitch; }
 
-    public void look(Session session){
-        try{
-            Bot bot = BotHandler.getBotBySession(session);
-            bot.session.send(new ClientPlayerPositionRotationPacket(false, this.posX, this.posY, this.posZ, this.yaw, this.pitch));
-        } catch (InvalidSessionException ignored) {}
+    public void look(Bot bot){
+        bot.session.send(new ClientPlayerPositionRotationPacket(false, this.posX, this.posY, this.posZ, this.yaw, this.pitch));
     }
 
-    public void look(Session session, float yaw, float pitch){
-        try{
-            Bot bot = BotHandler.getBotBySession(session);
+    public void look(Bot bot, float yaw, float pitch){
             bot.session.send(new ClientPlayerPositionRotationPacket(false, this.posX, this.posY, this.posZ, yaw, pitch));
-        } catch (InvalidSessionException ignored) {}
     }
 
 }

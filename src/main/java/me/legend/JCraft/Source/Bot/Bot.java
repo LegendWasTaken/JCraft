@@ -4,7 +4,6 @@ import com.github.steveice10.mc.protocol.MinecraftConstants;
 import com.github.steveice10.mc.protocol.MinecraftProtocol;
 import com.github.steveice10.mc.protocol.data.game.ItemStack;
 import me.legend.JCraft.Source.Bot.BotConsole.BotConsole;
-import me.legend.JCraft.Source.BotHandler.BotHandler;
 import me.legend.JCraft.Source.Bot.Inventory.Inventory;
 import me.legend.JCraft.Source.Network.NetworkHandler;
 import me.legend.JCraft.Source.Util.EntityPosition;
@@ -46,13 +45,12 @@ public class Bot {
         this.host = host;
         this.port = port;
         this.console = new BotConsole(this, true, true);
-        this.inventory = new Inventory(this.session, new ItemStack[36]);
+        this.inventory = new Inventory(this, new ItemStack[36]);
 
         world = new World();
 
         this.premium = false;
         init();
-        BotHandler.addBot(this);
     }
 
     /**
@@ -64,23 +62,27 @@ public class Bot {
      * @param port Port of target server
      */
     public Bot(String email, String password, String host, Integer port){
+        this.username = "Pre-Auth";
         this.email = email;
         this.password = password;
         this.host = host;
         this.port = port;
+        this.console = new BotConsole(this, true, true);
+        this.inventory = new Inventory(this, new ItemStack[36]);
 
         this.premium = true;
         init();
-        BotHandler.addBot(this);
     }
 
     private void init(){
         if(this.premium) {
             try {
                 minecraftProtocol = new MinecraftProtocol(this.email, this.password, false);
-                if(debug) System.out.println("Successfully authenticated user.");
+                this.console.debug("Authenticated user " + minecraftProtocol.getProfile().getName());
+                this.username = minecraftProtocol.getProfile().getName();
             } catch(RequestException e) {
-                if(debug) e.printStackTrace();
+                this.console.debug("There was an error with authenticating the bot, details are as follows");
+                this.console.debug(e.getMessage());
                 return;
             }
         } else {
@@ -91,11 +93,10 @@ public class Bot {
         client.getSession().setFlag(MinecraftConstants.AUTH_PROXY_KEY, Proxy.NO_PROXY);
         client.getSession().addListener(new NetworkHandler(this));
         session = client.getSession();
-        client.getSession().connect();
     }
 
-    public static void debug(String message){
-        if(debug) System.out.println("[DEBUG] " + message);
+    public void connect(){
+        client.getSession().connect();
     }
 
     public String getName(){

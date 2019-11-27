@@ -9,7 +9,7 @@ import java.util.Date;
 public class BotConsole {
 
     private Bot bot;
-    private Boolean log, debug, ingame;
+    private Boolean log, debug;
 
     public BotConsole(Bot bot, Boolean log, Boolean debug){ this.bot = bot; this.log = log; this.debug = debug; }
 

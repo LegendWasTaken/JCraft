@@ -2,8 +2,8 @@ package me.legend.JCraft.Source.Bot.World.Block;
 
 public class Block {
 
-    public int data;
-    public int type;
+    public int data = 0;
+    public int type = 0;
 
     public Block(){
         this.data = 0;

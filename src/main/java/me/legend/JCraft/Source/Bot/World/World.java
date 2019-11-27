@@ -61,8 +61,7 @@ public class World {
         int relativeX = x - ((x >> 4) * 16);
         int relativeY = y - ((y >> 4) * 16);
         int relativeZ = z - ((z >> 4) * 16);
-        block.setType(
-          chunkColumn.sections[y >> 4].getBlocks().getBlock(relativeX, relativeY, relativeZ));
+        block.setType(chunkColumn.sections[y >> 4].getBlocks().getBlock(relativeX, relativeY, relativeZ));
         block.setData(chunkColumn.sections[y >> 4].getBlocks().getData(relativeX, relativeY, relativeZ));
         return block;
     }
@@ -122,13 +121,5 @@ public class World {
                 return;
         }
         session.send(new ClientPlayerPlaceBlockPacket(Vector3d.toPosition(blockLocation.floor()), face, held, cursorX, cursorY, cursorZ));
-    }
-
-    public void placeBlock(Face face, Vector3d referenceBlock, ItemStack held, Session session){
-        float cx = 0; // stArtInG it WiTh 0 Is RedUnDeNt
-        float cy = 0;// fucking good luck gamer
-        float cz = 0;
-        System.out.println("Final block location X: " + referenceBlock.x + ", Y: " + referenceBlock.y + ", Z: " + referenceBlock.z );
-        session.send(new ClientPlayerPlaceBlockPacket(Vector3d.toPosition(referenceBlock), face, held, 8, 8, 8));
     }
 }
