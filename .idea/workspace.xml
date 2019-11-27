@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d72728a8-c627-43e9-a88e-bf26a9e54a22" name="Default Changelist" comment="Concept event handler. Small refractors">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/legend/JCraft/API/JBot/EventHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/legend/JCraft/API/JBot/JBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/legend/JCraft/API/JBot/JBot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/legend/JCraft/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/legend/JCraft/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/legend/JCraft/Source/Bot/Bot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/legend/JCraft/Source/Bot/Bot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/legend/JCraft/Source/Network/PacketHandlers/ServerConnection/ChatPacket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/legend/JCraft/Source/Network/PacketHandlers/ServerConnection/ChatPacket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/legend/JCraft/Source/Network/PacketHandlers/ServerConnection/JoinGamePacket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/legend/JCraft/Source/Network/PacketHandlers/ServerConnection/JoinGamePacket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/me/legend/JCraft/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/legend/JCraft/Main.class" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="LegendWasTaken &lt;caiodcw@gmail.com&gt;" />
+      </list>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1TLHMEiY4IzpcfzfQ5KRTKHwLou" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Development\Java\JCraft\docs" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="me.legend.JCraft.Main" />
+      <module name="JCraft" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="me.legend.JCraft.Source.Bot.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d72728a8-c627-43e9-a88e-bf26a9e54a22" name="Default Changelist" comment="" />
+      <created>1573232405370</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1573232405370</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Removed disconnect handling">
+      <created>1573773640501</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1573773640501</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Added block placement, added mcprotocollib to the repo">
+      <created>1574704636061</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1574704636061</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Refractored file paths ( Should make more sense )">
+      <created>1574705436061</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1574705436061</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Redid how packets are handled">
+      <created>1574710302797</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1574710302797</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Added a console for the bot ( Make it look nicer )">
+      <created>1574710340023</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1574710340023</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Small refractor with bot class">
+      <created>1574720980435</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1574720980435</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Added documentation">
+      <created>1574723927975</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1574723927975</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Added documentation">
+      <created>1574724067890</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1574724067890</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Added documentation">
+      <created>1574724165069</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1574724165069</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Start of the API | World added.">
+      <created>1574870697160</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1574870697160</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Removed large comment ( Waste of bytes )" />
+    <MESSAGE value="Removed disconnect handling" />
+    <MESSAGE value="Added block placement, added mcprotocollib to the repo" />
+    <MESSAGE value="Refractored file paths ( Should make more sense )" />
+    <MESSAGE value="Redid how packets are handled" />
+    <MESSAGE value="Added a console for the bot ( Make it look nicer )" />
+    <MESSAGE value="Small refractor with bot class" />
+    <MESSAGE value="Added documentation" />
+    <MESSAGE value="Start of the API | World added." />
+    <MESSAGE value="Concept event handler. Small refractors" />
+    <option name="LAST_COMMIT_MESSAGE" value="Concept event handler. Small refractors" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/JCraft$Main.ic" NAME="Main Coverage Results" MODIFIED="1573599875902" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>me.legend.JCraft.Source.*</FILTER>
+    </SUITE>
+  </component>
+</project>

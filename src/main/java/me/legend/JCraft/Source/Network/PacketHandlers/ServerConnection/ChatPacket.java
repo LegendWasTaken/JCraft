@@ -26,6 +26,8 @@ public class ChatPacket {
             bot.getConsole().log(chatmsg);
         }
 
+        bot.getHandler().ChatEvent(chatmsg);
+
         //if(!chatmsg.equals("chat.type.announcement")) bot.getConsole().log(chatmsg); else bot.getConsole().debug("This message type is not yet supported by JCraft");
 
     }

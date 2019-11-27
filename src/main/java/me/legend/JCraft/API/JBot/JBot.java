@@ -4,6 +4,8 @@ import me.legend.JCraft.API.JBot.JConsole.JConsole;
 import me.legend.JCraft.API.JWorld.JWorld;
 import me.legend.JCraft.Source.Bot.Bot;
 
+import java.awt.*;
+
 public class JBot {
 
     private String email, username, password, host;
@@ -13,26 +15,33 @@ public class JBot {
     private JWorld world;
     private JConsole console;
 
+    private EventHandler handler;
+
     public JBot(String username, String host, Integer port){
         this(username, null, host, port);
     }
 
     public JBot(String email, String password, String host, Integer port){
+        this.handler = new EventHandler(this);
         console = new JConsole(this, true, true);
         this.email = password == null ? null : email;
 
 
         if(password != null){
-            bot = new Bot(email, password, host, port);
+            bot = new Bot(email, password, host, port, this.handler);
         } else {
-            bot = new Bot(email, host, port);
+            bot = new Bot(email, host, port, this.handler);
         }
         this.password = password;
         this.host = host;
         this.port = port;
 
         this.world = new JWorld(bot.getWorld(), this.bot);
+
+
     }
+
+    public void registerEventHandler(EventHandler handler){ this.handler = handler; }
 
     public JWorld getWorld(){ return this.world; }
     public String getName(){ return this.username; }

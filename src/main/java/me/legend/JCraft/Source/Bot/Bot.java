@@ -3,6 +3,7 @@ package me.legend.JCraft.Source.Bot;
 import com.github.steveice10.mc.protocol.MinecraftConstants;
 import com.github.steveice10.mc.protocol.MinecraftProtocol;
 import com.github.steveice10.mc.protocol.data.game.ItemStack;
+import me.legend.JCraft.API.JBot.EventHandler;
 import me.legend.JCraft.Source.Bot.BotConsole.BotConsole;
 import me.legend.JCraft.Source.Bot.Inventory.Inventory;
 import me.legend.JCraft.Source.Network.NetworkHandler;
@@ -28,6 +29,8 @@ public class Bot {
     private Inventory inventory;
     private BotConsole console;
 
+    private EventHandler handler;
+
     public static Boolean debug = true;
     public MinecraftProtocol minecraftProtocol;
     public Client client;
@@ -40,8 +43,9 @@ public class Bot {
      * @param host Target server IP
      * @param port Port of target server
      */
-    public Bot(String username, String host, Integer port){
+    public Bot(String username, String host, Integer port, EventHandler handler){
         this.username = username;
+        this.handler = handler;
         this.host = host;
         this.port = port;
         this.console = new BotConsole(this, true, true);
@@ -61,8 +65,9 @@ public class Bot {
      * @param host Target server IP
      * @param port Port of target server
      */
-    public Bot(String email, String password, String host, Integer port){
+    public Bot(String email, String password, String host, Integer port, EventHandler handler){
         this.username = "Pre-Auth";
+        this.handler = handler;
         this.email = email;
         this.password = password;
         this.host = host;
@@ -109,6 +114,7 @@ public class Bot {
     public World getWorld(){ return this.world; }
     public Inventory getInventory(){ return this.inventory; }
     public BotConsole getConsole(){ return this.console; }
+    public EventHandler getHandler(){ return this.handler; }
 
     public void setLocation(EntityPosition entityPosition){ this.location = entityPosition; }
 
