@@ -1,7 +1,7 @@
 # Bot Documentation
  
   ## World
-  The world is currently the **most** advanced feature in this library. Extensive documntation is written on it.
+  The world is currently the **most** advanced feature in this library. Extensive documentation is written on it.
   
   ### world.getBlock(Vector3D location)
   * `location` - The absolute location in the world, that you want to get the block data of.
