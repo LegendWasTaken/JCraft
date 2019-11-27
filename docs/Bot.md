@@ -79,7 +79,7 @@
   * `message` - The message that you want to send
   
   ## Inventory
-  The inventory management is **very** basic, and can be expanded on with relative ease. Refer to [this](https://github.com/LegendWasTaken/JCraft/blob/master/docs/README.md) on requirements, and insutrctions on how to contribute.
+  The inventory management is **very** basic, and can be expanded on with relative ease. Refer to [this](https://github.com/LegendWasTaken/JCraft/blob/master/docs/README.md) on requirements, and instructions on how to contribute.
   
   ### inventory.setHeldSlot(int slot)
   * `slot` - The slot that you want to set as the current held slot
