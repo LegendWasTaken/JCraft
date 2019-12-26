@@ -1,9 +1,14 @@
 package me.legend.JCraft.Source.Bot.World.Block;
 
+import me.legend.JCraft.Source.Util.Vector3d;
+
+import java.util.Vector;
+
 public class Block {
 
-    public int data = 0;
-    public int type = 0;
+    public int data;
+    public int type;
+    public Vector3d location = null;
 
     public Block(){
         this.data = 0;
@@ -15,9 +20,10 @@ public class Block {
         this.type = type;
     }
 
-    public Block(int data, int type){
+    public Block(int data, int type, int x, int y, int z){
         this.data = data;
         this.type = type;
+        this.location = new Vector3d(x, y, z);
     }
 
     public void setData(int data){

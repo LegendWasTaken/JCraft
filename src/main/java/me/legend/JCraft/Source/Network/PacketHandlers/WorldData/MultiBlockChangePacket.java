@@ -11,7 +11,7 @@ public class MultiBlockChangePacket {
         for(int i=0; i<packet.getRecords().length; i++){
             BlockChangeRecord record = packet.getRecords()[i];
             Position target = record.getPosition();
-            Block block = new Block(record.getData(), record.getId());
+            Block block = new Block(record.getData(), record.getId(), target.getX(), target.getY(), target.getZ());
             bot.getWorld().setBlock(target.getX(), target.getY(), target.getZ(), block);
         }
     }

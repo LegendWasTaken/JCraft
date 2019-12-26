@@ -8,7 +8,7 @@ import me.legend.JCraft.Source.Bot.World.Block.Block;
 public class BlockChangePacket {
     public BlockChangePacket(ServerBlockChangePacket packet, Bot bot){
         Position target = packet.getRecord().getPosition();
-        Block block = new Block(packet.getRecord().getData(), packet.getRecord().getId());
+        Block block = new Block(packet.getRecord().getData(), packet.getRecord().getId(), target.getX(), target.getY(), target.getZ());
         bot.getWorld().setBlock(target.getX(), target.getY(), target.getZ(), block);
     }
 }

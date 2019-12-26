@@ -20,13 +20,12 @@ public class ChatPacket {
                 JsonObject textObj = (JsonObject) ARRAY.get(1);
                 JsonArray textArray = (JsonArray) textObj.get("extra");
                 JsonObject textString = (JsonObject) textArray.get(0);
-            System.out.println("[" + nameObj.get("text").getAsString() + "]" + " " + textString.get("text").getAsString());
             //This is hardcoded, but it doesn't matter until there is an issue with another chat type. (With different JSON syntax)
+            if(bot.getChatToConsole()) bot.getConsole().log("[" + nameObj.get("text").getAsString() + "]" + " " + textString.get("text").getAsString());
         } else {
-            bot.getConsole().log(chatmsg);
+            if(bot.getChatToConsole()) bot.getConsole().log(chatmsg);
         }
-
-        bot.getHandler().ChatEvent(chatmsg);
+        bot.fireChatEvent(chatmsg, bot);
 
         //if(!chatmsg.equals("chat.type.announcement")) bot.getConsole().log(chatmsg); else bot.getConsole().debug("This message type is not yet supported by JCraft");
 

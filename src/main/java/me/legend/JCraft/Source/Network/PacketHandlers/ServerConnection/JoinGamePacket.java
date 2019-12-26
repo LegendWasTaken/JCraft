@@ -8,7 +8,6 @@ import me.legend.JCraft.Source.Exceptions.InvalidSectionSizeException;
 
 public class JoinGamePacket {
     public JoinGamePacket(ServerJoinGamePacket packet, Bot bot){
-        bot.getHandler().LoginEvent();
-        bot.getConsole().log("Logged onto: " + bot.getHost() + ":" + bot.getPort());
+        bot.fireLoginEvent(bot);
     }
 }

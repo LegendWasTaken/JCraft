@@ -4,7 +4,11 @@ import com.github.steveice10.mc.protocol.data.game.Chunk;
 import com.github.steveice10.mc.protocol.data.game.ItemStack;
 import com.github.steveice10.mc.protocol.data.game.ShortArray3d;
 import com.github.steveice10.mc.protocol.data.game.values.Face;
+import com.github.steveice10.mc.protocol.packet.ingame.client.ClientChatPacket;
 import com.github.steveice10.mc.protocol.packet.ingame.client.player.ClientPlayerPlaceBlockPacket;
+import com.github.steveice10.mc.protocol.packet.ingame.client.player.ClientPlayerPositionRotationPacket;
+import me.legend.JCraft.Source.Bot.Bot;
+import me.legend.JCraft.Source.Entity.Player;
 import me.legend.JCraft.Source.Util.EntityPosition;
 import me.legend.JCraft.Source.Util.Vector3d;
 import me.legend.JCraft.Source.Bot.World.Block.Block;
@@ -17,9 +21,8 @@ import java.util.List;
 
 public class World {
 
-    public List<Entity> entities = new ArrayList<Entity>();
-
-    public List<ChunkColumn> chunks = new ArrayList<ChunkColumn>();
+    private List<Entity> entities = new ArrayList<Entity>();
+    private List<ChunkColumn> chunks = new ArrayList<ChunkColumn>();
 
     public void addChunkColumn(ChunkColumn chunkColumn){
         chunks.add(chunkColumn);
@@ -29,6 +32,25 @@ public class World {
 
     public List<ChunkColumn> getChunks() { return chunks; }
     public List<Entity> getEntities() { return entities; }
+    public List<Player> getPlayers() {
+        List<Player> players = new ArrayList<Player>();
+        for(int i=0; i<this.entities.size(); i++){
+            Entity cur = this.entities.get(i);
+            if(cur instanceof Player) players.add((Player) cur);
+        }
+        return players;
+    }
+
+    public void addEntity(Entity entity){ this.entities.add(entity); }
+    public void addPlayer(Player player){ this.entities.add(player); }
+    public void removeEntity(Integer id){
+        for(int i=0; i<this.entities.size(); i++){
+            if(this.entities.get(i).getEntityID().equals(id)) {
+                this.entities.remove(i);
+                break;
+            }
+        }
+    }
 
     public ChunkColumn getChunk(int x, int z){
         int chunkX = x >> 4;
@@ -64,6 +86,7 @@ public class World {
         int relativeZ = z - ((z >> 4) * 16);
         block.setType(chunkColumn.sections[y >> 4].getBlocks().getBlock(relativeX, relativeY, relativeZ));
         block.setData(chunkColumn.sections[y >> 4].getBlocks().getData(relativeX, relativeY, relativeZ));
+        block.location = new Vector3d(x, y, z);
         return block;
     }
 
@@ -74,7 +97,7 @@ public class World {
         blocks.setData(relativeX, relativeY, relativeZ, block.data);
     }
 
-    public void placeBlock(Vector3d blockLocation, Vector3d offset, Session session, ItemStack held) {
+    public void placeBlock(Bot bot, Vector3d blockLocation, Vector3d offset) {
         Face face = Face.INVALID;
         offset.floor();
         if(!(offset.x + offset.y + offset.z > 2)) {
@@ -84,7 +107,7 @@ public class World {
                 // Y Axis check
                 offset.y == 1 ? Face.TOP : offset.y == - 1 ? Face.BOTTOM :
                   // Z Axis Check
-                    offset.z == 1 ? Face.WEST : offset.z == - 1 ? Face.EAST : Face.INVALID;
+                  offset.z == 1 ? Face.WEST : offset.z == - 1 ? Face.EAST : Face.INVALID;
         }
 
         float cursorX = 0, cursorY = 0, cursorZ = 0;
@@ -121,6 +144,7 @@ public class World {
             default:
                 return;
         }
-        session.send(new ClientPlayerPlaceBlockPacket(Vector3d.toPosition(blockLocation.floor()), face, held, cursorX, cursorY, cursorZ));
+        bot.session.send(new ClientPlayerPositionRotationPacket(true, bot.getX(), bot.getY(), bot.getZ(), bot.getYaw(), bot.getPitch()));
+        bot.session.send(new ClientPlayerPlaceBlockPacket(Vector3d.toPosition(blockLocation.floor()), face, bot.getInventory().getHeldItem(), cursorX, cursorY, cursorZ));
     }
 }

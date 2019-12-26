@@ -1,46 +1,11 @@
 package me.legend.JCraft.Source.Util;
 
 import com.github.steveice10.mc.protocol.data.game.Position;
-import me.legend.JCraft.API.Enums.Direction;
 
 public class Vector3d {
     public double x;
     public double y;
     public double z;
-
-    public Vector3d(Direction direction){
-        switch(direction){
-            case UP:
-                this.x = 0;
-                this.y = 1;
-                this.z = 0;
-                break;
-            case DOWN:
-                this.x = 0;
-                this.y = -1;
-                this.z = 0;
-            case EAST:
-                this.x = 1;
-                this.y = 0;
-                this.z = 0;
-                break;
-            case WEST:
-                this.x = -1;
-                this.y = 0;
-                this.z = 0;
-            case SOUTH:
-                this.x = 1;
-                this.y = 0;
-                this.z = 0;
-                break;
-            case NORTH:
-                this.x = -1;
-                this.y = 0;
-                this.z = 0;
-                break;
-        }
-
-    }
 
     public Vector3d(double x, double y, double z) {
         this.x = x;

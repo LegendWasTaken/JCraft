@@ -3,9 +3,11 @@ package me.legend.JCraft.Source.Bot;
 import com.github.steveice10.mc.protocol.MinecraftConstants;
 import com.github.steveice10.mc.protocol.MinecraftProtocol;
 import com.github.steveice10.mc.protocol.data.game.ItemStack;
-import me.legend.JCraft.API.JBot.EventHandler;
 import me.legend.JCraft.Source.Bot.BotConsole.BotConsole;
 import me.legend.JCraft.Source.Bot.Inventory.Inventory;
+import me.legend.JCraft.Source.Entity.Entity;
+import me.legend.JCraft.Source.Entity.Player;
+import me.legend.JCraft.Source.Events.*;
 import me.legend.JCraft.Source.Network.NetworkHandler;
 import me.legend.JCraft.Source.Util.EntityPosition;
 import me.legend.JCraft.Source.Bot.World.World;
@@ -29,11 +31,17 @@ public class Bot {
     private Inventory inventory;
     private BotConsole console;
 
-    private EventHandler handler;
+    private ChatEvent chatEvent = null;
+    private LoginEvent loginEvent = null;
+    private TeleportEvent teleportEvent = null;
+    private NewEntityEvent newEntityEvent = null;
+    private NewPlayerEvent newPlayerEvent = null;
+
+    private Boolean ChatToConsole = false;
 
     public static Boolean debug = true;
-    public MinecraftProtocol minecraftProtocol;
-    public Client client;
+    private MinecraftProtocol minecraftProtocol;
+    private Client client;
     public Session session;
 
     /**
@@ -43,13 +51,11 @@ public class Bot {
      * @param host Target server IP
      * @param port Port of target server
      */
-    public Bot(String username, String host, Integer port, EventHandler handler){
+    public Bot(String username, String host, Integer port){
         this.username = username;
-        this.handler = handler;
         this.host = host;
         this.port = port;
         this.console = new BotConsole(this, true, true);
-        this.inventory = new Inventory(this, new ItemStack[36]);
 
         world = new World();
 
@@ -65,15 +71,13 @@ public class Bot {
      * @param host Target server IP
      * @param port Port of target server
      */
-    public Bot(String email, String password, String host, Integer port, EventHandler handler){
+    public Bot(String email, String password, String host, Integer port){
         this.username = "Pre-Auth";
-        this.handler = handler;
         this.email = email;
         this.password = password;
         this.host = host;
         this.port = port;
         this.console = new BotConsole(this, true, true);
-        this.inventory = new Inventory(this, new ItemStack[36]);
 
         this.premium = true;
         init();
@@ -114,7 +118,9 @@ public class Bot {
     public World getWorld(){ return this.world; }
     public Inventory getInventory(){ return this.inventory; }
     public BotConsole getConsole(){ return this.console; }
-    public EventHandler getHandler(){ return this.handler; }
+    public Boolean getChatToConsole() { return this.ChatToConsole; }
+
+    public void setInventory(Inventory inventory){ this.inventory = inventory; }
 
     public void setLocation(EntityPosition entityPosition){ this.location = entityPosition; }
 
@@ -123,4 +129,20 @@ public class Bot {
     public double getZ() { return this.location.getPosZ(); }
     public float getYaw() { return this.location.getYaw(); }
     public float getPitch() { return this.location.getPitch(); }
+
+    // Events and handling
+    public void setChatEvent(ChatEvent event){ this.chatEvent = event; }
+    public void fireChatEvent(String text, Bot bot){ if(this.chatEvent != null) chatEvent.chatEvent(text, bot); }
+
+    public void setLoginEvent(LoginEvent event){ this.loginEvent = event; }
+    public void fireLoginEvent(Bot bot){ if(this.loginEvent != null) this.loginEvent.loginEvent(bot); }
+
+    public void setTeleportEvent(TeleportEvent event){ this.teleportEvent = event; }
+    public void fireTeleportEvent(Bot bot){ if(this.teleportEvent != null) this.teleportEvent.teleportEvent(bot);}
+
+    public void setNewEntityEvent(NewEntityEvent event){ this.newEntityEvent = event; }
+    public void fireNewEntityEvent(Bot bot, Entity entity){ if(this.newEntityEvent != null) this.newEntityEvent.newEntityEvent(bot, entity);}
+
+    public void setNewPlayerEvent(NewPlayerEvent event){ this.newPlayerEvent = event; }
+    public void fireNewPlayerEvent(Bot bot, Player player){ if(this.newPlayerEvent != null) this.newPlayerEvent.newPlayerEvent(bot, player);}
 }

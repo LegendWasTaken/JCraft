@@ -7,5 +7,6 @@ import me.legend.JCraft.Source.Util.EntityPosition;
 public class PlayerPositionRoationPacket {
     public PlayerPositionRoationPacket(ServerPlayerPositionRotationPacket packet, Bot bot){
         bot.setLocation(new EntityPosition(packet.getX(), packet.getY(), packet.getZ(), packet.getYaw(), packet.getPitch()));
+        bot.fireTeleportEvent(bot);
     }
 }

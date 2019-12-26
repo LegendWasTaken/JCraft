@@ -1,42 +1,33 @@
 package me.legend.JCraft;
 
-import me.legend.JCraft.API.JBot.EventHandler;
-import me.legend.JCraft.API.JBot.JBot;
-import me.legend.JCraft.API.Utils.BlockLocation;
+import com.github.steveice10.mc.protocol.packet.ingame.client.ClientChatPacket;
+import me.legend.JCraft.Source.Bot.Bot;
+import me.legend.JCraft.Source.Events.ChatEvent;
+import me.legend.JCraft.Source.Events.LoginEvent;
+import me.legend.JCraft.Source.Util.Vector3d;
 
 public class Main {
 
     public static void main(String[] args) {
-
-
-
-        JBot bot = new JBot("JCraft", "127.0.0.1", 25565);
-        TestHandler test = new TestHandler(bot);
-        bot.registerEventHandler(test);
+        Bot bot = new Bot("JCraft", "127.0.0.1", 25566);
         bot.connect();
-
-
+        bot.setChatEvent(new ChatEventHandler());
+        bot.setLoginEvent(new LoginEventHandler());
     }
 
 }
 
-class TestHandler extends EventHandler {
-
-    private JBot bot;
-
-    public TestHandler(JBot bot) {
-        super(bot);
-        this.bot = bot;
-    }
+class ChatEventHandler implements ChatEvent {
 
     @Override
-    public void LoginEvent(){
-        System.out.println("Bot has logged in");
+    public void chatEvent(String message, Bot bot) {
+        if(message.contains("ping")) bot.session.send(new ClientChatPacket("pong!"));
     }
+}
 
+class LoginEventHandler implements LoginEvent {
     @Override
-    public void ChatEvent(String message){
-        System.out.println("I have a new chat message");
+    public void loginEvent(Bot bot){
+        System.out.println("Bot has logged on");
     }
-
 }

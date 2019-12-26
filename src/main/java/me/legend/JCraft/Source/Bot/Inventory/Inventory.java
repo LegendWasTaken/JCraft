@@ -6,35 +6,15 @@ import me.legend.JCraft.Source.Bot.Bot;
 
 public class Inventory {
 
-    private Bot bot;
     private ItemStack[] items;
     private int heldSlot;
 
-    public Inventory(Bot bot, ItemStack[] i) {
-        this.bot = bot;
-        items = i;
-    }
+    public Inventory(ItemStack[] i) { items = i; }
 
+    public void setSlot(int slot, ItemStack item){ items[slot] = item; }
     public ItemStack getItem(int i) { return items[i]; }
+    public void setHeldItem(int i) { heldSlot = i; }
+    public ItemStack getHeldItem() { return items[heldSlot + 36]; }
 
-    public Inventory setHeldItem(int i, boolean update) {
-        if(update) {
-            bot.session.send(new ClientChangeHeldItemPacket(i));
-            /*
-            * For some reason who ever coded the held item update code
-            * is completely fucking brain dead, and only updates.
-            * When you actually send a "entity move packet"
-            * So fuck you to the retard who coded this at Mojang, and all of the fucking times I thought my code wasn't fucking working.
-            * you fucking piece of retarded shit
-            * you are a stale ham sandwich of a human
-            * */
-            bot.getLocation().look(bot);
-        }
-        heldSlot = i;
-        return this;
-    }
-
-    public ItemStack getHeldItem() {
-        return items[heldSlot + 36 /* Magic value is magic */];
-    }
+    public void setItems(ItemStack[] items){this.items = items; }
 }
