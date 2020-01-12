@@ -6,6 +6,7 @@ import me.legend.JCraft.Source.Entity.Player;
 
 public class SpawnPlayerPacket {
     public SpawnPlayerPacket(ServerSpawnPlayerPacket packet, Bot bot){
+        System.out.println(packet.getUUID());
         int entityID = packet.getEntityId();
         double x = packet.getX(), y = packet.getY(), z = packet.getZ();
         String name = "Player";

@@ -1,8 +1,6 @@
-package me.legend.JCraft.Source.Bot.World.Block;
+package me.legend.JCraft.Source.World.Block;
 
 import me.legend.JCraft.Source.Util.Vector3d;
-
-import java.util.Vector;
 
 public class Block {
 

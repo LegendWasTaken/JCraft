@@ -1,9 +1,8 @@
 package me.legend.JCraft.Source.Util;
 
+import com.github.steveice10.mc.protocol.data.game.Position;
 import com.github.steveice10.mc.protocol.packet.ingame.client.player.ClientPlayerPositionRotationPacket;
 import me.legend.JCraft.Source.Bot.Bot;
-import me.legend.JCraft.Source.Exceptions.InvalidSessionException;
-import org.spacehq.packetlib.Session;
 
 public class EntityPosition {
 
@@ -28,11 +27,11 @@ public class EntityPosition {
         this.pitch = (float) pitch;
     }
 
-    public void setPosX(double x){ this.posX = x; }
-    public void setPosY(double y){ this.posY = y; }
-    public void setPosZ(double z){ this.posZ = z; }
-    public void setYaw(float yaw){ this.yaw = yaw; }
-    public void setPitch(float pitch){ this.pitch = pitch; }
+    protected void setPosX(double x){ this.lastX = this.posX; this.posX = x; }
+    protected void setPosY(double y){ this.lastY = this.posY; this.posY = y; }
+    protected void setPosZ(double z){ this.lastZ = this.posZ; this.posZ = z; }
+    protected void setYaw(float yaw){ this.yaw = yaw; }
+    protected void setPitch(float pitch){ this.pitch = pitch; }
 
     public double getPosX() { return this.posX; }
     public double getPosY() { return this.posY; }
@@ -43,12 +42,18 @@ public class EntityPosition {
     public float getYaw() { return this.yaw; }
     public float getPitch() { return this.pitch; }
 
+    public Position toPosition(){
+        return new Position((int) this.posX, (int) this.posY, (int) this.posZ);
+    }
+
     public void look(Bot bot){
         bot.session.send(new ClientPlayerPositionRotationPacket(false, this.posX, this.posY, this.posZ, this.yaw, this.pitch));
     }
 
     public void look(Bot bot, float yaw, float pitch){
-            bot.session.send(new ClientPlayerPositionRotationPacket(false, this.posX, this.posY, this.posZ, yaw, pitch));
+        this.yaw = yaw;
+        this.pitch = pitch;
+        bot.session.send(new ClientPlayerPositionRotationPacket(false, this.posX, this.posY, this.posZ, yaw, pitch));
     }
 
 }

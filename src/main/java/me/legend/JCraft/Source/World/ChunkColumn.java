@@ -1,4 +1,4 @@
-package me.legend.JCraft.Source.Bot.World;
+package me.legend.JCraft.Source.World;
 
 import com.github.steveice10.mc.protocol.data.game.Chunk;
 import me.legend.JCraft.Source.Exceptions.InvalidChunkSectionException;

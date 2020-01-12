@@ -1,20 +1,16 @@
-package me.legend.JCraft.Source.Bot.World;
+package me.legend.JCraft.Source.World;
 
 import com.github.steveice10.mc.protocol.data.game.Chunk;
-import com.github.steveice10.mc.protocol.data.game.ItemStack;
 import com.github.steveice10.mc.protocol.data.game.ShortArray3d;
 import com.github.steveice10.mc.protocol.data.game.values.Face;
-import com.github.steveice10.mc.protocol.packet.ingame.client.ClientChatPacket;
 import com.github.steveice10.mc.protocol.packet.ingame.client.player.ClientPlayerPlaceBlockPacket;
 import com.github.steveice10.mc.protocol.packet.ingame.client.player.ClientPlayerPositionRotationPacket;
 import me.legend.JCraft.Source.Bot.Bot;
 import me.legend.JCraft.Source.Entity.Player;
-import me.legend.JCraft.Source.Util.EntityPosition;
 import me.legend.JCraft.Source.Util.Vector3d;
-import me.legend.JCraft.Source.Bot.World.Block.Block;
+import me.legend.JCraft.Source.World.Block.Block;
 import me.legend.JCraft.Source.Entity.Entity;
 import me.legend.JCraft.Source.Exceptions.InvalidChunkSectionException;
-import org.spacehq.packetlib.Session;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -61,7 +57,7 @@ public class World {
         return null;
     }
 
-    public Chunk getChunk(int x, int y, int z){
+    protected Chunk getChunk(int x, int y, int z){
         int chunkX = x >> 4;
         int chunkY = y >> 4;
         int chunkZ = z >> 4;

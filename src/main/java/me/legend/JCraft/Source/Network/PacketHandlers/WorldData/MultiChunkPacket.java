@@ -1,9 +1,8 @@
 package me.legend.JCraft.Source.Network.PacketHandlers.WorldData;
 
-import com.github.steveice10.mc.protocol.packet.ingame.server.world.ServerMultiBlockChangePacket;
 import com.github.steveice10.mc.protocol.packet.ingame.server.world.ServerMultiChunkDataPacket;
 import me.legend.JCraft.Source.Bot.Bot;
-import me.legend.JCraft.Source.Bot.World.ChunkColumn;
+import me.legend.JCraft.Source.World.ChunkColumn;
 import me.legend.JCraft.Source.Exceptions.InvalidSectionSizeException;
 
 public class MultiChunkPacket {

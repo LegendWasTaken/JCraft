@@ -4,7 +4,7 @@ import com.github.steveice10.mc.protocol.data.game.Position;
 import com.github.steveice10.mc.protocol.data.game.values.world.block.BlockChangeRecord;
 import com.github.steveice10.mc.protocol.packet.ingame.server.world.ServerMultiBlockChangePacket;
 import me.legend.JCraft.Source.Bot.Bot;
-import me.legend.JCraft.Source.Bot.World.Block.Block;
+import me.legend.JCraft.Source.World.Block.Block;
 
 public class MultiBlockChangePacket {
     public MultiBlockChangePacket(ServerMultiBlockChangePacket packet, Bot bot){

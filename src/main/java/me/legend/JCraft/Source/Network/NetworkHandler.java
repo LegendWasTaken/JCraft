@@ -1,10 +1,12 @@
 package me.legend.JCraft.Source.Network;
 
 import com.github.steveice10.mc.protocol.packet.ingame.server.ServerChatPacket;
+import com.github.steveice10.mc.protocol.packet.ingame.server.ServerDisconnectPacket;
 import com.github.steveice10.mc.protocol.packet.ingame.server.ServerJoinGamePacket;
 import com.github.steveice10.mc.protocol.packet.ingame.server.entity.ServerDestroyEntitiesPacket;
 import com.github.steveice10.mc.protocol.packet.ingame.server.entity.player.ServerChangeHeldItemPacket;
 import com.github.steveice10.mc.protocol.packet.ingame.server.entity.player.ServerPlayerPositionRotationPacket;
+import com.github.steveice10.mc.protocol.packet.ingame.server.entity.player.ServerUpdateHealthPacket;
 import com.github.steveice10.mc.protocol.packet.ingame.server.entity.spawn.ServerSpawnMobPacket;
 import com.github.steveice10.mc.protocol.packet.ingame.server.entity.spawn.ServerSpawnObjectPacket;
 import com.github.steveice10.mc.protocol.packet.ingame.server.entity.spawn.ServerSpawnPlayerPacket;
@@ -18,11 +20,13 @@ import me.legend.JCraft.Source.Network.PacketHandlers.Entities.DestroyEntitiesPa
 import me.legend.JCraft.Source.Network.PacketHandlers.Entities.SpawnMobPacket;
 import me.legend.JCraft.Source.Network.PacketHandlers.Entities.SpawnObjectPacket;
 import me.legend.JCraft.Source.Network.PacketHandlers.Entities.SpawnPlayerPacket;
+import me.legend.JCraft.Source.Network.PacketHandlers.Health.UpdateHealthPacket;
 import me.legend.JCraft.Source.Network.PacketHandlers.Inventory.ChangeHeldItemPacket;
 import me.legend.JCraft.Source.Network.PacketHandlers.Inventory.SetSlotPacket;
 import me.legend.JCraft.Source.Network.PacketHandlers.Inventory.WindowItemsPacket;
 import me.legend.JCraft.Source.Network.PacketHandlers.Location.PlayerPositionRoationPacket;
 import me.legend.JCraft.Source.Network.PacketHandlers.ServerConnection.ChatPacket;
+import me.legend.JCraft.Source.Network.PacketHandlers.ServerConnection.DisconnectPacket;
 import me.legend.JCraft.Source.Network.PacketHandlers.ServerConnection.JoinGamePacket;
 import me.legend.JCraft.Source.Network.PacketHandlers.WorldData.BlockChangePacket;
 import me.legend.JCraft.Source.Network.PacketHandlers.WorldData.MultiBlockChangePacket;
@@ -48,6 +52,7 @@ public class NetworkHandler extends SessionAdapter {
 
             // Server Stuff ( Main stuff )
             if(packet instanceof ServerJoinGamePacket) new JoinGamePacket((ServerJoinGamePacket) packet, this.bot);
+            else if(packet instanceof ServerDisconnectPacket) new DisconnectPacket((ServerDisconnectPacket) packet, this.bot);
             else if(packet instanceof ServerChatPacket) new ChatPacket((ServerChatPacket) packet, this.bot);
 
             // Location
@@ -69,6 +74,10 @@ public class NetworkHandler extends SessionAdapter {
             else if(packet instanceof ServerSpawnPlayerPacket) new SpawnPlayerPacket((ServerSpawnPlayerPacket) packet, this.bot);
             else if(packet instanceof ServerDestroyEntitiesPacket) new DestroyEntitiesPacket((ServerDestroyEntitiesPacket) packet, this.bot);
             else if(packet instanceof ServerSpawnMobPacket) new SpawnMobPacket((ServerSpawnMobPacket) packet, this.bot);
+
+            // Death and stuff, very very sad stuff really
+
+            else if(packet instanceof ServerUpdateHealthPacket) new UpdateHealthPacket((ServerUpdateHealthPacket) packet, bot);
 
         } catch (Exception ex) {ex.printStackTrace();}
     }

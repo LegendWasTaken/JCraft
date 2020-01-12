@@ -7,7 +7,7 @@ public class Player extends Entity {
 
     // Todo Move the players arraylist into the world class or somewhere that isn't inside of the fucking player class
 
-    private String name;
+    public String name;
 
     public Player(String name, int i, double x, double y, double z) {
         this(name, i, x, y, z, 0, 0);

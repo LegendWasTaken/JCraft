@@ -1,24 +1,30 @@
 # JCraft
 
-JCraft is a Java Library for creating high level Minecraft bots.
+JCraft is a Java Library for creating Minecraft bots. *Uses mcprotocollib as dependency*
 
 ## Installation
 
 Use GIT to clone this repository 
 
-```git
-git clone https://github.com/LegendWasTaken/JCraft.git
+```bash
+$git clone https://github.com/LegendWasTaken/JCraft.git
 ```
 
-## Examples
-
-> To do. Add more examples
-
-```java
-class Example {
-// Dab
-}
+CD into the JCraft directory with
+```bash
+$cd JCraft
 ```
+**Build** the source using 
+```bash
+$maven clean install
+```
+
+## Using JCraft with Maven
+Add this to your `pom.xml`
+```xml
+
+``` 
+*Remind me to this do this lol*
 
 ## Contributing
 All contributions are welcome, open a new pull request with what you want to contribute. And make sure they meet the following requirements.
